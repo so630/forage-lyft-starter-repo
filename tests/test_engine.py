@@ -31,7 +31,7 @@ class TestSternmanEngine(unittest.TestCase):
         engine = SternmanEngine(warning_light)
         self.assertTrue(engine.needs_service())
 
-    def test_should_be_serviced(self):
+    def test_should_not_be_serviced(self):
         warning_light = False
         engine = SternmanEngine(warning_light)
         self.assertFalse(engine.needs_service())

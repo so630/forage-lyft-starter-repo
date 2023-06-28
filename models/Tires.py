@@ -5,7 +5,7 @@ class Tire():
     def needs_service(self) -> bool:
         pass
 
-class CarriganTire(Tire):
+class CarriganTires(Tire):
     def needs_service(self) -> bool:
         for i in self.tire_wear:
             if i >= 0.9:
@@ -13,6 +13,6 @@ class CarriganTire(Tire):
         
         return False
     
-class OctoprimeTire(Tire):
+class OctoprimeTires(Tire):
     def needs_service(self) -> bool:
         return sum(self.tire_wear) >= 3
