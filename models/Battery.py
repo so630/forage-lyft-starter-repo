@@ -12,7 +12,7 @@ class SpindlerBattery(Battery):
         self.current_date = current_date
 
     def needs_service(self) -> bool:
-        return math.floor((datetime.timedelta(self.last_service_date - self.current_date).days)/365) >= 2
+        return (self.current_date - self.last_service_date).total_seconds() >= 2*365*24*3600
     
 class NubbinBattery(Battery):
     def __init__(self, last_service_date: datetime, current_date: datetime) -> None:
@@ -20,5 +20,5 @@ class NubbinBattery(Battery):
         self.current_date = current_date
 
     def needs_service(self) -> bool:
-        return math.floor((datetime.timedelta(self.last_service_date - self.current_date).days)/365) >= 4
+        return (self.current_date - self.last_service_date).total_seconds() >= 4*365*24*3600
         

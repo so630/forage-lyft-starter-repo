@@ -19,8 +19,8 @@ class WilloughbyEngine(Engine):
         return (self.last_service_mileage - self.current_mileage) >= 60000
     
 class SternmanEngine(Engine):
-    def __init__(self) -> None:
-        self.warning_light_on = False
+    def __init__(self, warning_light_on) -> None:
+        self.warning_light_on = warning_light_on
 
     def needs_service(self) -> bool:
         return self.warning_light_on
