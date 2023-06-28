@@ -20,5 +20,5 @@ class NubbinBattery(Battery):
         self.current_date = current_date
 
     def needs_service(self) -> bool:
-        return (self.current_date - self.last_service_date).total_seconds() >= 4*365*24*3600
+        return (self.current_date - self.last_service_date).total_seconds() >= 3*365*24*3600
         
