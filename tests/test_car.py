@@ -1,8 +1,11 @@
-import unittest
+import unittest, sys
 from datetime import datetime
+
+sys.path.append('../forage-lyft-starter-repo-fork')
 
 from models.Engine import CapuletEngine, WilloughbyEngine, SternmanEngine
 from models.Battery import NubbinBattery, SpindlerBattery
+
 
 class TestCapuletEngine(unittest.TestCase):
     def test_should_be_serviced(self):
